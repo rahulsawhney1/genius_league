@@ -1,0 +1,12 @@
+### Findings
+Through my model building process, I found that, while not perfect, we are able to predict a players rank with some certainty. Our model is very strong at finding a players general strength, but is slightly worse at the exact specifics. 
+For example, the model will never assume a silver player to be ranked Diamond or vice versa. But it will sometimes predict a silver player to be ranked gold. To me, this suggests that the distinctions between these leagues does have a certain degree of randomness to it. Silver rnaked players and gold ranked players play the same way. But those that get luckier in matches are ranked gold, while the unlucky are ranked silver. 
+Based upon the model's missclassifications I would think of the players as belonging to 5 groups instead of the 4 we have them ranked as. You have the unskilled players who are in the bronze league. You have the intermediate players in the silver and gold leagues. The advanced players in platnium and diamond. The masters who are only the players in the master and grandmaster league. And finally the pros. when grouped in these new bins, we are much better able to predict a player's rank. 
+
+
+### Future Data Collection
+The number one thing I would recommend that we look for is a way to get more data. Through a quick google search I saw that there are over 150000 active starcraft players. This number might not be entirely accurate, but there should defintely be more than the 3000 players that are currently accounted for. By having more data on more players, our model will be be able to make much better predictions. 
+
+A second thing I would try to fix would be getting real data on hours per week and total hours instead of their reported hours. In my modeling I saw these two eatures to be very strongly indictive of player rank. But at the same time, there are many incosistencies between the two. For example there are players that based on their hours per week and total hours have apparently been playing the game for over 10 years. If we could get real data about total hours and hours per week, the model would become much stronger.
+
+Finally, in terms of gameplay features, the most important features seem to be based on players reaction speeds to in game occurances. For example ActionLatency and GapBetweenPACs are both measures of how quick players act in game. Conversly, features like UniqueUnitsMade and UniqueHotKeys are much less important. If we could track additional data in relation to player reaction speed, we may better be able to predict their ranks. 
